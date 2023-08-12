@@ -1,0 +1,49 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+
+const baseTextColor = 'rgb(240, 240, 240)';
+const baseBackgroundColor = 'rgb(20, 20, 20)';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>arndtware</title>
+	</head>
+	<body>
+		<SiteHeader />
+		<div class="site-content">
+			<slot />
+		</div>
+	</body>
+</html>
+
+<style is:global define:vars={{ baseTextColor, baseBackgroundColor }}>
+	@font-face {
+		font-family: 'Righteous';
+		src: url('assets/fonts/Righteous-Regular.ttf');
+	}
+
+	body {
+		margin: 0;
+		background-color: var(--baseBackgroundColor);
+	}
+
+	.site-content {
+		margin: 1rem;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Righteous', sans-serif;
+		text-transform: uppercase;
+		color: var(--baseTextColor);
+	}
+
+	p {
+		font-family: sans-serif;
+		color: var(--baseTextColor);
+	}
+</style>

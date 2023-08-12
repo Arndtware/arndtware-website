@@ -1,0 +1,7 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs></defs>
+  <polygon points="1024,0 512,1024 320,1024 832,0"></polygon>
+  <polygon points="704,0 192,1024 0,1024 512,0"></polygon>
+  <ellipse cx="928" cy="544" rx="96" ry="96"></ellipse>
+  <ellipse cx="928" cy="928" rx="96" ry="96"></ellipse>
+</svg>
