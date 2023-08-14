@@ -1,0 +1,33 @@
+---
+import LogoImageComponent from "./LogoImageComponent.astro";
+import LogoTextComponent from "./LogoTextComponent.astro";
+---
+
+<div class="site-header-container">
+    <div class="logo-image-container">
+        <LogoImageComponent primaryColor="black" backgroundColor="white" />
+    </div>
+    <div class="logo-text-container">
+        <LogoTextComponent primaryColor="white" />
+    </div>
+</div>
+
+<style>
+    .site-header-container {
+        display: grid;
+        justify-items: center;
+        gap: 1rem;
+        background-color: black;
+        padding: 1rem;
+    }
+
+    .logo-image-container {
+        height: auto;
+        width: 4rem;
+    }
+
+    .logo-text-container {
+        font-size: 3rem;
+        align-self: self-end;
+    }
+</style>

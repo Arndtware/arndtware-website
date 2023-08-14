@@ -1,7 +1,7 @@
 {
-  "name": "@example/basics",
+  "name": "arndtware",
+  "type": "module",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "devDependencies": {
-    "astro": "^1.0.8"
+  "dependencies": {
+    "astro": "^2.10.7"
   }
 }
