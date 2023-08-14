@@ -14,20 +14,24 @@ import LogoTextComponent from "./LogoTextComponent.astro";
 
 <style>
     .site-header-container {
-        display: grid;
+        display: flex;
         justify-items: center;
         gap: 1rem;
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
         padding: 1rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
     }
 
     .logo-image-container {
         height: auto;
-        width: 4rem;
+        width: 3rem;
     }
 
     .logo-text-container {
-        font-size: 3rem;
-        align-self: self-end;
+        font-size: 2rem;
+        align-self: center;
     }
 </style>
