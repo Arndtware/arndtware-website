@@ -15,23 +15,64 @@ import LogoTextComponent from "./LogoTextComponent.astro";
 <style>
     .site-header-container {
         display: flex;
-        justify-items: center;
+        justify-content: center;
         gap: 1rem;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
         padding: 1rem;
-        position: fixed;
-        top: 0;
-        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
     }
 
     .logo-image-container {
         height: auto;
-        width: 3rem;
+        width: 4rem;
     }
 
     .logo-text-container {
-        font-size: 2rem;
+        font-size: 3.3rem;
         align-self: center;
+    }
+
+    @media (min-width: 600px) {
+        .site-header-container {
+            gap: 1.5rem;
+            padding: 1.5rem;
+        }
+
+        .logo-image-container {
+            width: 8rem;
+        }
+
+        .logo-text-container {
+            font-size: 5rem;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .site-header-container {
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .logo-image-container {
+            width: 9rem;
+        }
+
+        .logo-text-container {
+            font-size: 6.5rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .site-header-container {
+            gap: 3rem;
+            padding: 3rem;
+        }
+
+        .logo-image-container {
+            width: 10.5rem;
+        }
+
+        .logo-text-container {
+            font-size: 9rem;
+        }
     }
 </style>
