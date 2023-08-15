@@ -1,0 +1,24 @@
+---
+---
+
+<button class="button-component righteous-text">
+    <slot />
+</button>
+
+<style>
+    .button-component {
+		background-size: 200% auto;
+		transition: 0.5s;
+		background-image: linear-gradient(to right,#450067 0%, #005786 50%, #005786 51%, #450067 100%);
+		border-radius: 0.25rem;
+		border: solid #31313100 1px;;
+		height: 100%;
+		width: 100%;
+		font-size: 100%;
+		text-transform: uppercase;
+	}
+
+	.button-component:hover {
+		background-position: right center;
+	}
+</style>

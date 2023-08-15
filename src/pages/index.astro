@@ -3,9 +3,27 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 ---
 
 <SiteLayout>
-	<h1>Test H1 ABC</h1>
-	<h2>Test H2</h2>
-	<h3>Test H3</h3>
-	<h4>Test H4</h4>
-	<p>Welcome to Arndtware</p>
+	<h1 class="intro-heading">Your technology simplified.</h1>
+	<div class="intro-details">
+		<p>We are technology experts with years of experience. We can create your website, write your software, manage your systems, among many other things.</p>
+		<br>
+		<p>Reach out today, we'd love to chat with you about your needs and come up with a plan to provide you with solutions.</p>
+	</div>
 </SiteLayout>
+
+<style>
+	.intro-heading {
+		padding-top: 2rem;
+		text-align: center;
+	}
+
+	.intro-details {
+		font-size: 2rem;
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		padding: 1rem;
+		line-height: 125%;
+	}
+</style>
