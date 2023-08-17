@@ -1,5 +1,13 @@
 ---
 import SiteHeader from './SiteHeader.astro';
+
+const {
+	pageTitle = 'Arndtware',
+	pageSubtitle,
+	separator = ' - '
+} = Astro.props;
+
+const actualSeparator = !pageSubtitle ? '' : separator;
 ---
 
 <html lang="en">
@@ -8,7 +16,7 @@ import SiteHeader from './SiteHeader.astro';
 		<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Arndtware</title>
+		<title>{pageTitle}{actualSeparator}{pageSubtitle}</title>
 	</head>
 	<body>
 		<SiteHeader />
