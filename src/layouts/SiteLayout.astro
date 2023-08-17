@@ -1,7 +1,5 @@
 ---
 import SiteHeader from '../components/SiteHeader.astro';
-
-const primaryTextColor = 'rgb(240, 240, 240)';
 ---
 
 <html lang="en">
@@ -20,7 +18,7 @@ const primaryTextColor = 'rgb(240, 240, 240)';
 	</body>
 </html>
 
-<style is:global define:vars={{ primaryTextColor }}>
+<style is:global>
 	@font-face {
 		font-family: 'Righteous';
 		src: url('/assets/fonts/Righteous-Regular.ttf') format('truetype');
@@ -44,6 +42,12 @@ const primaryTextColor = 'rgb(240, 240, 240)';
 	@font-face {
 		font-family: 'Roboto Medium Italic';
 		src: url('/assets/fonts/Roboto-MediumItalic.ttf') format('truetype');
+	}
+
+	:root {
+		--primaryTextColor: rgb(240, 240, 240);
+		--screenTablet: 768px;
+		--screenDesktop: 1024px;
 	}
 
 	html {
