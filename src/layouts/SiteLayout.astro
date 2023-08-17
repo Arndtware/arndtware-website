@@ -1,7 +1,7 @@
 ---
 import SiteHeader from '../components/SiteHeader.astro';
 
-const baseTextColor = 'rgb(240, 240, 240)';
+const primaryTextColor = 'rgb(240, 240, 240)';
 ---
 
 <html lang="en">
@@ -20,48 +20,89 @@ const baseTextColor = 'rgb(240, 240, 240)';
 	</body>
 </html>
 
-<style is:global define:vars={{ baseTextColor }}>
+<style is:global define:vars={{ primaryTextColor }}>
 	@font-face {
 		font-family: 'Righteous';
 		src: url('/assets/fonts/Righteous-Regular.ttf') format('truetype');
 	}
 
 	@font-face {
-		font-family: 'Bree Serif';
-		src: url('/assets/fonts/BreeSerif-Regular.ttf') format('truetype');
+		font-family: 'Roboto Thin';
+		src: url('/assets/fonts/Roboto-Thin.ttf') format('truetype');
+	}
+
+	@font-face {
+		font-family: 'Roboto Thin Italic';
+		src: url('/assets/fonts/Roboto-ThinItalic.ttf') format('truetype');
+	}
+
+	@font-face {
+		font-family: 'Roboto Light';
+		src: url('/assets/fonts/Roboto-Light.ttf') format('truetype');
+	}
+
+	@font-face {
+		font-family: 'Roboto Medium Italic';
+		src: url('/assets/fonts/Roboto-MediumItalic.ttf') format('truetype');
+	}
+
+	html {
+		box-sizing: border-box;
+		min-height: 100%;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
 	}
 
 	body {
 		margin: 0;
-		display: grid;
-		background-image: linear-gradient(83.21deg,#00063a 0%,#1d0c25 100%);
+		min-height: 100%;
+		background-image: linear-gradient(135deg,#00307c 10%, #390047 50%,#001f51 90%);
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0;
+		padding: 0;
+		font-family: 'Righteous', sans-serif;
+		text-transform: uppercase;
+		color: var(--primaryTextColor);
+	}
+
+	p {
+		margin: 0;
+		padding: 0;
+		font-family: 'Roboto Thin', sans-serif;
+		color: var(--primaryTextColor);
 	}
 
 	.site-content {
 		padding: 1rem;
 	}
 
-	.righteous-text {
-		font-family: 'Righteous', sans-serif;
-		color: var(--baseTextColor);
+	.righteous-font {
+		font-family: 'Righteous';
+		color: var(--primaryTextColor);
 	}
 
-	h1, h2, h3, h4, h5, h6 {
-		margin: 0;
-		padding: 0;
-		font-family: 'Righteous', sans-serif;
-		text-transform: uppercase;
-		color: var(--baseTextColor);
+	.roboto-light-font {
+		font-family: 'Roboto Light';
+		color: var(--primaryTextColor);
 	}
 
-	p {
-		margin: 0;
-		padding: 0;
-		font-family: sans-serif;
-		color: var(--baseTextColor);
+	.roboto-medium-italic-font {
+		font-family: 'Roboto Medium Italic';
+		color: var(--primaryTextColor);
 	}
 
-	h1 {
-		font-size: 3rem;
+	.color-primary-text {
+		color: var(--primaryTextColor);
 	}
 </style>

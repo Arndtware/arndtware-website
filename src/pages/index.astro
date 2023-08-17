@@ -1,29 +1,62 @@
 ---
+import ButtonComponent from '../components/ButtonComponent.astro';
 import SiteLayout from '../layouts/SiteLayout.astro';
 ---
 
 <SiteLayout>
-	<h1 class="intro-heading">Your technology simplified.</h1>
-	<div class="intro-details">
-		<p>We are technology experts with years of experience. We can create your website, write your software, manage your systems, among many other things.</p>
-		<br>
-		<p>Reach out today, we'd love to chat with you about your needs and come up with a plan to provide you with solutions.</p>
+	<div class="intro-container">
+		<h1 class="intro-heading">Technology simplified.</h1>
+		<div class="intro-details">
+			<p>Solutions for <span class="roboto-medium-italic-font">your</span> business <br>is <span class="roboto-medium-italic-font">our</span> business.</p>
+		</div>
+		<div class="contact-button-container">
+			<ButtonComponent>
+				<div class="contact-button-text color-primary-text righteous-font">Contact us!</div>
+			</ButtonComponent>
+		</div>
 	</div>
 </SiteLayout>
 
 <style>
+	.intro-container {
+		margin: 5rem 0;
+	}
 	.intro-heading {
-		padding-top: 2rem;
 		text-align: center;
 	}
 
 	.intro-details {
-		font-size: 2rem;
-		width: 60%;
-		margin-left: auto;
-		margin-right: auto;
+		margin: 0 auto;
 		text-align: center;
-		padding: 1rem;
-		line-height: 125%;
+		padding-top: 0.5rem;
+		line-height: 150%;
+		font-size: 1.5rem;
+	}
+
+	.contact-button-container {
+		height: 3rem;
+		max-width: 25rem;
+		margin: 1rem auto;
+	}
+
+	.contact-button-text {
+		text-transform: uppercase;
+		font-size: 1.75rem;
+	}
+
+	@media (min-width: 1024px) {
+		.intro-heading {
+			font-size: 3rem;
+		}
+
+		.intro-details {
+			padding-top: 2rem;
+			line-height: 150%;
+			font-size: 2rem;
+		}
+
+		.contact-button-container {
+			margin: 3rem auto;
+		}
 	}
 </style>
