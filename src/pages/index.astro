@@ -1,62 +1,11 @@
 ---
-import ButtonComponent from '../components/ButtonComponent.astro';
+import HomepageIntroComponent from '../components/homepage/HomepageIntroComponent.astro';
 import SiteLayout from '../layouts/SiteLayout.astro';
 ---
 
 <SiteLayout>
-	<div class="intro-container">
-		<h1 class="intro-heading">Technology simplified.</h1>
-		<div class="intro-details">
-			<p>Solutions for <span class="roboto-medium-italic-font">your</span> business <br>is <span class="roboto-medium-italic-font">our</span> business.</p>
-		</div>
-		<div class="contact-button-container">
-			<ButtonComponent>
-				<div class="contact-button-text color-primary-text righteous-font">Contact us!</div>
-			</ButtonComponent>
-		</div>
-	</div>
+	<HomepageIntroComponent />
 </SiteLayout>
 
 <style>
-	.intro-container {
-		margin-top: 3rem;
-	}
-	.intro-heading {
-		text-align: center;
-	}
-
-	.intro-details {
-		margin: 0 auto;
-		text-align: center;
-		padding-top: 0.5rem;
-		line-height: 150%;
-		font-size: 1.5rem;
-	}
-
-	.contact-button-container {
-		height: 3rem;
-		max-width: 25rem;
-		margin: 1rem auto;
-	}
-
-	.contact-button-text {
-		text-transform: uppercase;
-		font-size: 1.75rem;
-	}
-
-	@media (min-width: 1024px) {
-		.intro-heading {
-			font-size: 3rem;
-		}
-
-		.intro-details {
-			padding-top: 2rem;
-			line-height: 150%;
-			font-size: 2rem;
-		}
-
-		.contact-button-container {
-			margin: 3rem auto;
-		}
-	}
 </style>
