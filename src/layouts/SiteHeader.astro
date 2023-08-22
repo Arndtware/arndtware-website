@@ -1,63 +1,24 @@
 ---
 import LogoImageComponent from "../components/shared/LogoImageComponent.astro";
 import LogoTextComponent from "../components/shared/LogoTextComponent.astro";
+
+const {
+    backgroundColor = 'rgba(0, 0, 0, 0.8)'
+} = Astro.props;
 ---
 
-<div class="site-header-container">
-    <div class="logo-image-container">
-        <LogoImageComponent primaryColor="black" backgroundColor="white" />
-    </div>
-    <div class="logo-text-container">
-        <LogoTextComponent primaryColor="white" />
-    </div>
-</div>
+<header class="site-header">
+    <LogoImageComponent primaryColor="black" backgroundColor="white" size="4rem"/>
+    <LogoTextComponent primaryColor="white" size="3.3rem"/>
+</header>
 
-<style>
-    .site-header-container {
+<style define:vars={{ backgroundColor }}>
+    .site-header {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: center;
         gap: 1rem;
         padding: 1rem;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .logo-image-container {
-        height: auto;
-        width: 4rem;
-    }
-
-    .logo-text-container {
-        font-size: 3.3rem;
-        align-self: center;
-    }
-
-    @media (min-width: 768px) {
-        .site-header-container {
-            gap: 2rem;
-            padding: 2rem;
-        }
-
-        .logo-image-container {
-            width: 9rem;
-        }
-
-        .logo-text-container {
-            font-size: 6.5rem;
-        }
-    }
-
-    @media (min-width: 1024px) {
-        .site-header-container {
-            gap: 3rem;
-            padding: 3rem;
-        }
-
-        .logo-image-container {
-            width: 10.5rem;
-        }
-
-        .logo-text-container {
-            font-size: 9rem;
-        }
+        background-color: var(--backgroundColor);
     }
 </style>

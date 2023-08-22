@@ -1,0 +1,84 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro'
+---
+
+<SiteLayout pageSubtitle="Styles">
+    <h1>Style Information</h1>
+    <h2>Heading Styles</h2>
+    <ul>
+        <li><h1>Heading 1</h1></li>
+        <li><h2>Heading 2</h2></li>
+        <li><h3>Heading 3</h3></li>
+        <li><h4>Heading 4</h4></li>
+        <li><h5>Heading 5</h5></li>
+        <li><h6>Heading 6</h6></li>
+    </ul>
+
+    <h2>Fonts</h2>
+    <h3>Righteous</h3>
+    <ul>
+        <li><p class="righteous">Righteous Text</p></li>
+    </ul>
+
+    <h3>Roboto</h3>
+    <ul>
+        <li><p class="roboto w100">Roboto 100</p></li>
+        <li><p class="roboto w100 italic">Roboto 100 italic</p></li>
+        <li><p class="roboto w300">Roboto 300</p></li>
+        <li><p class="roboto w300 italic">Roboto 300 italic</p></li>
+        <li><p class="roboto w400">Roboto 400</p></li>
+        <li><p class="roboto w500">Roboto 500</p></li>
+        <li><p class="roboto w500 italic">Roboto 500 italic</p></li>
+        <li><p class="roboto w700">Roboto 700</p></li>
+        <li><p class="roboto w700 italic">Roboto 700 italic</p></li>
+        <li><p class="roboto w900">Roboto 900</p></li>
+        <li><p class="roboto w900 italic">Roboto 900 italic</p></li>
+    </ul>
+</SiteLayout>
+
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0.5rem 0 3rem 1rem;
+    }
+
+    p {
+        color: var(--primaryTextColor);
+    }
+
+    .roboto {
+        font-family: 'Roboto';
+    }
+
+    .righteous {
+        font-family: 'Righteous';
+    }
+
+    .italic {
+        font-style: italic;
+    }
+
+    .w100 {
+        font-weight: 100;
+    }
+
+    .w300 {
+        font-weight: 300;
+    }
+
+    .w400 {
+        font-weight: 400;
+    }
+
+    .w500 {
+        font-weight: 500;
+    }
+
+    .w700 {
+        font-weight: 700;
+    }
+
+    .w900 {
+        font-weight: 900;
+    }
+</style>

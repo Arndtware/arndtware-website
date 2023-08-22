@@ -1,16 +1,19 @@
 ---
-const { primaryColor = 'white' } = Astro.props;
+const {
+    primaryColor = 'white',
+    size = '5rem'
+} = Astro.props;
 ---
 
-<div class="logo-text">
-    arndtware
-</div>
+<p class="logo-text">arndtware</p>
 
-<style define:vars={{ primaryColor }}>
+<style define:vars={{ primaryColor, size }}>
     .logo-text {
         display: flex;
+        justify-content: center;
+        align-items: center;
         font-family: 'Righteous', sans-serif;
-        line-height: 100%;
         color: var(--primaryColor);
+        font-size: var(--size);
     }
 </style>

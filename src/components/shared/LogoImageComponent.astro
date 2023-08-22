@@ -1,11 +1,12 @@
 ---
 const {
     primaryColor = 'black',
-    backgroundColor = 'white'
+    backgroundColor = 'white',
+    size = '10rem'
 } = Astro.props;
 ---
 
-<div class="logo-component-container">
+<section class="logo-container">
     <svg class="logo-svg" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
         <defs></defs>
         <polygon points="1024,0 512,1024 320,1024 832,0"></polygon>
@@ -13,13 +14,17 @@ const {
         <ellipse cx="928" cy="544" rx="96" ry="96"></ellipse>
         <ellipse cx="928" cy="928" rx="96" ry="96"></ellipse>
     </svg>
-</div>
+</section>
 
-<style define:vars={{ backgroundColor, primaryColor }}>
-    .logo-component-container {
+<style define:vars={{ backgroundColor, primaryColor, size }}>
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: var(--backgroundColor);
-        display: grid;
         border-radius: 0.3rem;
+        width: var(--size);
+        height: var(--size);
     }
 
     .logo-svg {

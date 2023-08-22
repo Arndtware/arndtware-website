@@ -1,11 +1,23 @@
 ---
-import HomepageIntroComponent from '../components/homepage/HomepageIntroComponent.astro';
 import SiteLayout from '../layouts/SiteLayout.astro';
 ---
 
 <SiteLayout pageSubtitle="Home">
-	<HomepageIntroComponent />
+	<section>
+		<!-- <h1>Technology simplified.</h1>
+		<p>Solutions for your business is our business.</p> -->
+		<p>COMING SOON!</p>
+	</section>
 </SiteLayout>
 
 <style>
+	section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 10rem;
+		font-size: 5rem;
+		font-family: 'Righteous';
+		color: var(--primaryTextColor);
+	}
 </style>
