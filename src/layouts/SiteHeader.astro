@@ -1,0 +1,24 @@
+---
+import LogoImageComponent from "../components/shared/LogoImageComponent.astro";
+import LogoTextComponent from "../components/shared/LogoTextComponent.astro";
+
+const {
+    backgroundColor = 'rgba(0, 0, 0, 0.8)'
+} = Astro.props;
+---
+
+<header class="site-header">
+    <LogoImageComponent primaryColor="black" backgroundColor="white" size="4rem"/>
+    <LogoTextComponent primaryColor="white" size="3.3rem"/>
+</header>
+
+<style define:vars={{ backgroundColor }}>
+    .site-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background-color: var(--backgroundColor);
+    }
+</style>
